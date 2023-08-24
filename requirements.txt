@@ -4,5 +4,4 @@ tiktoken
 streamlit
 pypdf
 unstructured
-python-magic
 python-magic-bin
