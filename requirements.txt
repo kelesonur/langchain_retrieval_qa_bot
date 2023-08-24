@@ -5,4 +5,4 @@ streamlit
 pypdf
 unstructured
 python-magic
-# For windows python-magic-bin
+python-magic-bin
