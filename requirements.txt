@@ -1,5 +1,5 @@
 openai
-langchain[docarray]
+langchain
 tiktoken
 streamlit
 pypdf
