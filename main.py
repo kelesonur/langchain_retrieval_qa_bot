@@ -33,14 +33,13 @@ def load_chain(files: List[Tuple[str, str]]) -> BaseConversationalRetrievalChain
     all_docs = []
 
     for file_name, file_type in files:
-        match file_type:
-            case "text/plain":
-                doc = load_text_file(file_name)
-            case "application/pdf":
-                doc = load_pdf_file(file_name)
-            case _:
-                st.write("File type is not supported!")
-                st.stop()
+        if file_type == "text/plain":
+            doc = load_text_file(file_name)
+        if file_type == "application/pdf":
+            doc = load_pdf_file(file_name)
+        if file_type == "":
+            st.write("File type is not supported!")
+            st.stop()
 
         all_docs.extend(doc)
 
